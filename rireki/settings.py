@@ -23,9 +23,14 @@ SECRET_KEY = '-+5zs1fz!b2rihh4x)9+l8jzjs-5fdoh(7-9pe80p*=ml-gnv9'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+TEMPLATE_DIRS = (
+    '{}{}'.format(BASE_DIR, '/templates/'),
+    )
 
 ALLOWED_HOSTS = []
 
+MEDIA_ROOT = BASE_DIR + '/../../assets' + '/media'
+MEDIA_URL = '/media/'
 
 # Application definition
 
