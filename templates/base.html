@@ -14,14 +14,28 @@
 
 <body>
 	<div class="container">
+		<!-- Navigation Bar -->
+		<!-- Use container-fluid? -->
 		<div class="row">
-			<!-- Navigation Bar -->
-			<!-- End Navigation Bar -->
+			<div class="col-md-3">
+				Home
+			</div>
+			<div class="col-md-3">
+				Experience
+			</div>
+			<div class="col-md-3">
+				Work Examples
+			</div>
+			<div class="col-md-3">
+				Contact
+			</div>
+		</div>
+		<!-- End Navigation Bar -->
+
+{% block main %}
+{% endblock %}
 		</div>
 	</div>
-
-	{% block main %}
-	{% endblock %}
 </body>
 
 <footer>
