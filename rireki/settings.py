@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     # Project Apps
     'contact',
@@ -49,6 +50,11 @@ INSTALLED_APPS = (
     'static_pages',
 
     # Third Party Apps
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "rireki.context_processors.site_title",
 )
 
 MIDDLEWARE_CLASSES = (
