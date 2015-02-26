@@ -3,7 +3,7 @@ import examples
 
 # Create your views here.
 def examples_list(request):
-	available_examples = examples.Example.objects.filter(published=True)
+	available_examples = examples.models.Example.objects.filter(published=True)
 
 	return render(request, 'examples/index.html', {
 		'examples': available_examples,
