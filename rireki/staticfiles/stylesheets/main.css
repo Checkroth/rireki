@@ -1,0 +1,8 @@
+#nav-bar {
+	text-align: center;
+	font-size:	23px;
+}
+
+a:hover #nav-bar {
+	text-decoration: none;
+}

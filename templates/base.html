@@ -1,6 +1,7 @@
-<head>
-    <link href="{{ STATIC_URL }}stylesheets/base.css" rel="stylesheet">
+{% load staticfiles %}
 
+<head>
+    <link href="{% static 'stylesheets/main.css' %}" rel="stylesheet">
 	<!-- Twitter Bootstrap CDN -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
