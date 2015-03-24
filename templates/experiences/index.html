@@ -2,6 +2,17 @@
 
 {% block main %}
 <div class="row">
-	EXPERIENCES
-</dvi>
+	{% if available_experiences %}
+	{% for experience in available_experiences %}
+	<div class="row enumerated_list">
+		<a href="{{ example.company_link }}">{{ example.title }}</a><br />
+		{{ example.description }}
+	</div>
+	{% endfor %}
+	{% else %}
+	<div class="no_entries">
+		No experiences are available for display
+	</div>
+	{% endif %}
+</div>
 {% endblock %}

@@ -1,10 +1,10 @@
 from django.shortcuts import render
-import examples
+import experiences
 
 # Create your views here.
 def experience_index(request):
-	all_examples = examples.models.Example.objects.filter(published=True)
+	available_exaperiences = experiences.models.Experience.objects.filter(published=True)
 
 	return render(request, 'experiences/index.html', {
-		'examples': all_examples,
+		'available_exaperiences': available_exaperiences,
 		})

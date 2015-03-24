@@ -2,6 +2,19 @@
 
 {% block main %}
 <div class="row">
-	CONTACT PAGE
+	{% if contact_methods %}
+	{% for contact_method in contact_methods %}
+	<div class="row enumerated_list">
+		<div class="contact_method">
+			<!-- This should be an image. Need to put in work for default image in absense of image. -->
+			<a href="{{contact_method.url}}">{{ contact_method.service_title }}</a><br />
+		</div>
+	</div>
+	{% endfor %}
+	{% else %}
+	<div class="no_entries">
+		No contact methods are available to display.
+	</div>
+	{% endif %}
 </div>
 {% endblock %}

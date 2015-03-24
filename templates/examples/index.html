@@ -2,6 +2,18 @@
 
 {% block main %}
 <div class="row">
-	EXAMPLES
+	{% if available_examples %}
+	{% for example in available_examples %}
+<!-- Find a way to enumeratethis list using django templating and css (math?) -->
+	<div class="row enumerated_list_0">
+		<a href="{{ example.link }}">{{} example.title }</a><br />
+		{{ example.description }}
+	</div>
+	{% endfor %}
+	{% else %}
+	<div class="row no_entries">
+		No work examples are available for display.
+	</div>
+	{% endif %}
 </div>
 {% endblock %}
