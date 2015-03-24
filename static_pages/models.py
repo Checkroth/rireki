@@ -6,5 +6,7 @@ class PersonalInfo(models.Model):
 	# Method for ensuring that only one instance of this model exists
 	# 	Any extra db entries would be meaningless and should not be possible
 	site = models.OneToOneField(Site)
+
+	# Regular model work below, given the above
 	site_name = models.CharField(max_length=255)
-	main_description = models.CharField(max_length=255)
+	main_description = models.TextField()
