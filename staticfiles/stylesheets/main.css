@@ -3,6 +3,6 @@
 	font-size:	23px;
 }
 
-a:hover #nav-bar {
+#nav-bar a:hover {
 	text-decoration: none;
 }
